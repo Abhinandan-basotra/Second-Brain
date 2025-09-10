@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.route('/content').post(isAuthenticated, addContent);
 router.route('/content').get(isAuthenticated, getUserContent);
-router.route('/content').delete(isAuthenticated, deleteContent);
+router.route('/delete').post(isAuthenticated, deleteContent);
 router.route('/brain/share').post(isAuthenticated, shareLink);
 router.route('/brain/:shareLink').get(isAuthenticated, getSharedContent)
 

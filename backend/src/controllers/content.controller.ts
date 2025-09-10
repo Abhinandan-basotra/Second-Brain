@@ -31,7 +31,7 @@ export const getUserContent = async (req: Request, res: Response) => {
     try {
         const userId = req.userId;
         const content = await Content.find({ userId: userId }).populate('userId', 'username')
-        res.json(content);
+        res.json({content});
     } catch (error) {
         console.log(error);
 

@@ -30,6 +30,6 @@ const contentSchema = new mongoose.Schema({
         type: mongoose.Schema.ObjectId,
         ref: 'User'
     }
-})
+},{timestamps: true})
 
 export const Content = mongoose.model('Content', contentSchema)
